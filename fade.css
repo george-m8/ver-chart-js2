@@ -1,0 +1,8 @@
+.fade-in {
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.6s ease-in-out;
+}
+  
+.fade-in.visible {
+    opacity: 1; /* Fade to visible */
+}
