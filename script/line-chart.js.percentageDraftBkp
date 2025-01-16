@@ -12,7 +12,7 @@ window.createLineChart = function() {
       labels: labels,
       datasets: [{
           label: 'DERS-16 (Emotional Regulation)',
-          data: interpolatePoints(0, 6.3, labels.length),
+          data: interpolatePoints(100, 93.7, labels.length),
           fill: false,
           borderColor: '#c693c2',
           tension: 0.1
@@ -20,7 +20,7 @@ window.createLineChart = function() {
 
       {
           label: 'TAS-DIF (Alexithymia)',
-          data: interpolatePoints(0, 13.9, labels.length),
+          data: interpolatePoints(100, 86.1, labels.length),
           fill: false,
           borderColor: '#89ccca',
           tension: 0.1
@@ -99,7 +99,7 @@ window.createLineChart = function() {
             },
             title:  {
                 display: true,
-                text: 'Percentage Improvement (%)',
+                text: 'Percentage Change (%)',
                 color: '#fff',
                 font: {
                     size: 16,
