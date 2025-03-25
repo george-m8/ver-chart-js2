@@ -24,7 +24,20 @@ const observerLine = new IntersectionObserver((entries, obs) => {
       }
     });
   }, { threshold: threshold });
+
+  const observerScatter = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        window.createScatterChart();
+        if (debug) console.log('Scatter chart created');
+        // Add the 'visible' class to trigger the fade-in
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: threshold });
   
   // Observe each canvas (run once DOM is ready; or simply place this script below the canvases)
   observerLine.observe(document.getElementById('line-chart'));
   observerBar.observe(document.getElementById('bar-chart'));
+  observerScatter.observe(document.getElementById('scatter-chart'));
