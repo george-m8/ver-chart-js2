@@ -1,7 +1,7 @@
 window.createScatterChart = function() {
     Promise.all([
-        fetch('./json/psqiDurat.json').then(response => response.json()),
-        fetch('./json/psqiLaten.json').then(response => response.json())
+        fetch('https://ver-chart-js.netlify.app/json/psqiDurat.json').then(response => response.json()),
+        fetch('https://ver-chart-js.netlify.app/json/psqiLaten.json').then(response => response.json())
     ])
     .then(([duratData, latenData]) => {
         const duratScatterPoints = duratData.map(item => ({
