@@ -1,5 +1,5 @@
 window.createScatterChart = function() {
-    fetch('https://ver-chart-js.netlify.app/json/psqiDurat2.json')
+    fetch('https://ver-chart-js.netlify.app/json/psqiDuratInvert.json')
         .then(response => response.json())
         .then(jsonData => {
             // Transform JSON data to Chart.js format
